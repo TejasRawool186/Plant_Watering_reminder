@@ -12,14 +12,46 @@ A cross-platform Flutter application designed to elegantly help plant lovers eff
 
 ---
 
+## ⚙️ Prerequisites & Initial Setup
+
+Before running the app for the first time after cloning, ensure you have:
+
+1. **Flutter SDK** installed (version 3.0+)
+   - Download from [https://flutter.dev/docs/get-started/install](https://flutter.dev/docs/get-started/install)
+   - Add Flutter to your system PATH
+
+2. **Android Studio** or **Visual Studio Code** with Flutter extension
+
+3. **Chrome Browser** (for web testing)
+
+### First Time Setup Steps:
+
+```bash
+# 1. Navigate to the project directory
+cd "D:\Plant_Watering_reminder"
+
+# 2. Get all Flutter dependencies
+flutter pub get
+
+# 3. Clean previous builds (optional but recommended)
+flutter clean
+
+# 4. Generate dependencies
+flutter pub get
+
+# 5. You're ready to run!
+```
+
+---
+
 ## 🚀 How To Run The App
 
 This app is currently optimized to be rigorously tested via a **Local Web Browser (Chrome)**.
 
-Whenever you reboot your computer or close your development window and want to restart the app later, simply follow these steps:
+**To run the app:**
 
 1. Open your Windows **Terminal**, **Command Prompt**, or **PowerShell**.
-2. Navigate to your project folder using this command:
+2. Navigate to your project folder:
    ```bash
    cd "D:\Plant_Watering_reminder"
    ```
@@ -27,9 +59,15 @@ Whenever you reboot your computer or close your development window and want to r
    ```bash
    flutter run -d chrome
    ```
-4. A Chrome window will securely open housing your application!
+4. A Chrome window will automatically open with your application!
 
-*Note: Whenever you want to safely stop the server, just press `q` in your Terminal.*
+**To stop the server:** Press `q` in your Terminal.
+
+### Platform-Specific Running:
+
+- **Web (Chrome)** - `flutter run -d chrome`
+- **Android Emulator** - `flutter run -d emulator-5554`
+- **iOS Simulator** - `flutter run -d iphone-se` (macOS only)
 
 ---
 
@@ -52,7 +90,30 @@ Your plant data (names, schedules, frequencies, and UI colors) is entirely hooke
 
 ---
 
-## 🔮 Future Roadmap 
+## � Troubleshooting
+
+### Issue: "Flutter command not found"
+**Solution:** Ensure Flutter is added to your system PATH. Run `flutter doctor` to verify installation.
+
+### Issue: "Chrome not found"
+**Solution:** Make sure Google Chrome is installed. Update PATH if necessary.
+
+### Issue: "Build failed" or "Dependency issues"
+**Solution:** Run the following commands:
+```bash
+flutter clean
+flutter pub get
+flutter pub upgrade
+flutter run -d chrome
+```
+
+### Issue: Firebase connection errors
+**Solution:** The app automatically uses the configured Firebase project (`plant-watering-reminder-1f917`). Ensure you have internet connectivity and that the backend is accessible.
+
+### Issue: Local storage not persisting
+**Solution:** The app uses local storage that persists across browser sessions. If data is lost, try:
+- Clearing browser cache: Settings > Privacy > Clear browsing data
+- Restarting the Flutter development server  
 Based on the original software requirement specifications (`srs.txt`), the application framework is fully primed for the following upgrades at any time:
 - AI Plant Suggestions & ML Disease Detection
 - External Weather-API connections to delay watering schedules
