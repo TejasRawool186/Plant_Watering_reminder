@@ -1,0 +1,24 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "plant-watering-reminder-1f917",
+                    "appId": "1:531705019045:android:ea40d21b1aa7307216ab4c",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "plant-watering-reminder-1f917",
+                    "configurations": {
+                        "android": "1:531705019045:android:ea40d21b1aa7307216ab4c",
+                        "ios": "1:531705019045:ios:08ff01e45905a94b16ab4c",
+                        "web": "1:531705019045:web:e1b7784b1134e29316ab4c",
+                        "windows": "1:531705019045:web:8ee772bd56870bfc16ab4c"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,146 @@
+📄 Software Requirement Specification (SRS)
+📱 Project Title: Plant Watering Reminder App (Flutter + Firebase)
+1. 📌 Introduction
+1.1 Purpose
+
+The purpose of this application is to help plant lovers efficiently manage and track watering schedules of their plants. The system provides reminders, stores plant data, and ensures users never miss watering their plants.
+
+1.2 Scope
+
+This application allows users to:
+
+Add and manage plants
+Track watering schedules
+Receive reminders
+Store data locally using JSON
+Sync data with Firebase Firestore
+
+The system is developed using Flutter for cross-platform mobile support.
+
+1.3 Definitions
+Watering Frequency: Number of days between watering
+Firestore: Cloud database by Firebase
+JSON Storage: Local file storage format
+2. 🧭 Overall Description
+2.1 Product Perspective
+
+This is a standalone mobile application with optional cloud backup using Firebase.
+
+2.2 Product Functions
+
+The system performs the following:
+
+Add plant details
+Calculate next watering date
+Show reminders
+Store and sync plant data
+Display watering schedule
+2.3 User Characteristics
+Basic smartphone users
+No technical knowledge required
+Suitable for plant lovers, beginners, and gardeners
+2.4 Constraints
+Must be developed using Flutter only
+Requires internet for Firebase sync
+Limited storage for local JSON
+3. ⚙️ Functional Requirements
+3.1 Add Plant
+User can add plant with:
+Name
+Image
+Watering frequency
+3.2 View Plants
+Display list of all plants
+Show next watering date
+3.3 Mark as Watered
+User can tap plant to mark as watered
+System updates last watered date
+3.4 Delete Plant
+Swipe gesture to remove plant
+3.5 Watering Reminder
+Notify user when watering is due
+3.6 Local Storage
+Store plant data in JSON file
+3.7 Firebase Sync
+Backup plant data to Firestore
+Sync data across devices
+3.8 Watering Schedule
+Show upcoming watering tasks in list format
+4. 🛠️ Non-Functional Requirements
+4.1 Performance
+Fast loading (< 2 seconds)
+Smooth UI transitions
+4.2 Usability
+Simple and clean UI
+Easy navigation
+4.3 Reliability
+Data should not be lost
+Backup via Firebase
+4.4 Security
+Secure Firebase authentication (optional)
+4.5 Scalability
+Can support multiple plants
+Future feature expansion possible
+5. 🧱 System Architecture
+5.1 Architecture Type
+Client-side Flutter app
+Firebase backend
+5.2 Architecture Diagram (Write in Exam)
+
+👉 Draw 3 blocks:
+
+User → Flutter App → (JSON Storage + Firebase Firestore)
+6. 📊 Data Flow Diagram (DFD)
+Level 0 (Context Diagram)
+
+👉 Draw:
+
+User → [Plant App] → Data Storage
+Level 1
+
+👉 Draw processes:
+
+Add Plant
+Update Watering
+View Schedule
+7. 👤 Use Case Diagram (Write in Exam)
+Actor:
+User
+Use Cases:
+Add Plant
+Delete Plant
+Mark as Watered
+View Schedule
+Sync Data
+
+👉 Draw:
+User connected to all above actions
+
+8. 🧠 Data Model
+JSON Structure Example
+{
+  "name": "Peace Lily",
+  "frequency": 2,
+  "lastWatered": "2026-04-08"
+}
+9. 🔄 Process Logic
+Watering Calculation
+
+Next watering date is calculated as:
+
+Next Date = Last Watered Date + Frequency
+10. 📱 User Interface Design
+Screens:
+Home Screen (Plant List)
+Add Plant Screen
+Plant Detail Screen
+Schedule Screen
+Design Features:
+Light green theme 🌿
+Rounded cards
+Minimal UI
+11. 🚀 Future Enhancements
+AI plant suggestions
+Weather-based watering
+Dark mode
+Plant disease detection
